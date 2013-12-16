@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+
+// Defaults
+$default-font-size      : 16px; /* 100% */
+$default-space          : 1em;
+$default-space-and-half : $default-space * 1.5;
+$default-space-double   : $default-space * 2;
+$default-space-triple   : $default-space * 3;
+$default-space-quad     : $default-space * 4;
+$default-space-half     : $default-space / 2;
+$default-space-quarter  : $default-space / 4;
+$default-pad            : 1em;
+$default-pad-and-half   : $default-pad * 1.5;
+$default-pad-double     : $default-pad * 2;
+$default-pad-half       : $default-pad / 2;
+$default-pad-quarter    : $default-pad / 4;
+
+
+// Colors
+$brand-primary-color   : #ccc;
+$brand-secondary-color : #999;
+$brand-facebook        : #3b5998;
+$brand-twitter         : #00acee;
+$brand-linkedin        : #0e76a8;
+$link-color-normal     : #cc0544;
+$link-color-hover      : #333;
+$font-color            : #333;
+
+
+// Typography
+$font-primary               : 'DIN-Regular', 'arial', 'sans-serif';
+$font-secondary             : '', 'Times New Roman', serif;
+$font-size-norm             : px-to-em( 16px );
+$font-size-slightly-larger  : px-to-em( 18px );
+$font-size-slightly-smaller : px-to-em( 14px );
+$font-size-small            : px-to-em( 12px );
+$font-size-large            : px-to-em( 20px );
+
+
+// Breakpoints
+$bp-small   : 24em;
+$bp-small-2 : 29.75em;
+$bp-small-3 : 39.8em;
+$bp-med     : 46.8em;
+$bp-med-2   : 48em;
+$bp-large   : 50em;
+$bp-large-2 : 66em;
+$bp-xl      : 73em;
+$bp-xxl     : 89em;
+$bp-xxxl    : 93em;
+
+
+// Layout
+// Susy Settings
+$total-columns : 4;
+$column-width : 4em;
+$gutter-width : 1em;
+$grid-padding : $gutter-width;
+$break-1      : 8;
+$break-2      : 12;
+$break-3      : 14;

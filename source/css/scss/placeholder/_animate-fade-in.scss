@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/**
+ * .animate-fade-in
+ */
+
+
+%animate-fade-in {
+  @include transition( opacity, 0.3s, ease-out );
+
+  &:hover {
+    opacity: 1;
+  }
+}

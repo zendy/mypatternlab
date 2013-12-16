@@ -1,0 +1,7 @@
+// Create a box
+// -------------------------
+@mixin size( $height, $width ) {
+  width: $width;
+  height: $height;
+}
+

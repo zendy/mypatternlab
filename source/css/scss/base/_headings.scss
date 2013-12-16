@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    HEADINGS
+\*------------------------------------*/
+/**
+ * h1, .aplha
+ * h2, .beta
+ * h3, .gamma
+ * h4, .delta
+ * h5, .teta
+ * h6, .zeta
+ */
+
+h1, h2, h3, h4, h6 {
+  font-family: "DIN-Bold";
+  font-weight: 700;
+}
+
+h4, h5 {
+  color: #cc0544;
+}
+
+@include at-breakpoint( $total-columns ) {
+  h1, .alpha {
+    @include font-size-in-em( 36px );
+  }
+
+  h2, .beta {
+    @include font-size-in-em( 31px );
+  }
+
+  h3, .gamma {
+    @include font-size-in-em( 27px );
+  }
+
+  h4, .delta {
+    @include font-size-in-em( 22px );
+  }
+
+  h5, .teta {
+    font-family: "DIN-Medium";
+    font-weight: 400;
+    @include font-size-in-em( 15px );
+  }
+
+  h6, .zeta {
+    @include font-size-in-em( 12px );
+  }
+}

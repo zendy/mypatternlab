@@ -1,0 +1,6 @@
+// Create square box in px
+// -------------------------
+// $sizeInPx: eg 12px
+@mixin square-px( $size-in-px ) {
+  @include size( $size-in-px, $size-in-px );
+}

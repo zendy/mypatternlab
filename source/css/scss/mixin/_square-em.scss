@@ -1,0 +1,6 @@
+// Create square box in em
+// -------------------------
+// $sizeInPx: eg 12px
+@mixin square-em( $size-in-px ) {
+  @include size( px-to-em( $size-in-px ), px-to-em( $size-in-px ) );
+}

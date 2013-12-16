@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    PARAGRAPH
+\*------------------------------------*/
+/**
+ * p
+ */
+
+
+p {
+  font-family: "DIN-Light";
+  font-weight: 200;
+  @include font-size-in-em( 18px );
+
+  strong {
+    font-family: "DIN-Bold";
+    font-weight: 700;
+  }
+}

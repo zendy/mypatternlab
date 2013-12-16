@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    NAVIGATIONS
+\*------------------------------------*/
+/**
+ * .nav--category
+ * .nav--article
+ */
+
+
+.nav--category {
+  height: 50px;
+  background-color: #f20544;
+  @include background-image( linear-gradient( -45deg, #f20544, #f20544 25%, #cc0544 25%, #cc0544 50%, #b30544 50%, #b30544 75%, #cc0544 75% ) );
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked + .nav--category__topic {
+      display: block;
+    }
+  }
+
+  .nav--category__topic {
+    display: none;
+    @include background-image( linear-gradient( #f20544, #b30544 ) );
+
+    li {
+      display: inline-block;
+      margin: 0 20px 0 10px;
+    }
+  }
+
+  a {
+    color: #fff;
+    @include font-size-in-em( 18px );
+
+    &:hover, &:focus {
+      color: #f99;
+    }
+  }
+}
+
+.nav--article {
+  border: 3px dotted #ccc;
+
+  li {
+    border-top: 3px dotted #ccc;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  a {
+    display: block;
+    padding: $default-pad-half;
+
+    &:focus, &:hover {
+      background-color: #fff;
+    }
+  }
+}

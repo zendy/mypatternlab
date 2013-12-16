@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    ARTICLE
+\*------------------------------------*/
+/**
+ * .article__header-block
+ * .article__header-block__date
+ * .article__header-block__author
+ */
+
+
+.article__header-block {
+  padding: $default-pad;
+  width: 70%;
+  background-color: #fff;
+  background-color: rgba( 255, 255, 255, 0.8 );
+}
+
+.article__header-block__date, .article__header-block__author {
+  @include font-size-in-em( 14px );
+}
+
+.article__header-block__date {
+  color: #666;
+}
+
+.article__header-block__author {
+  color: #cc0544;
+}
+
+.article__header__figure {
+  img {
+    display: block;
+  }
+}
+
+.article__tags {
+  color: #999;
+  font-size: px-to-em( 14px, 18px );
+
+  span {
+    color: #333;
+  }
+}
+
+.article__likes {
+  display: block;
+  position: relative;
+  color: #fff;
+  line-height: 31px;
+  text-align: center;
+  @include square-px( 40px );
+
+  &.icon-comment::before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    color: #ff2b63;
+    font-size: 2.1em;
+    line-height: 40px;
+    @include square-px( 40px );
+  }
+}

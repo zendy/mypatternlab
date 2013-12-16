@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    ICONS
+\*------------------------------------*/
+/**
+ * .icon-linkedin
+ * .icon-twitter
+ * .icon-googleplus
+ * .icon-facebook
+ * .icon-mail
+ * .icon-comment
+ */
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin:before {
+  content: "\e600";
+}
+.icon-twitter:before {
+  content: "\e601";
+}
+.icon-googleplus:before {
+  content: "\e602";
+}
+.icon-facebook:before {
+  content: "\e603";
+}
+.icon-mail:before {
+  content: "\e604";
+}
+.icon-comment:before {
+  content: "\e605";
+}

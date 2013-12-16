@@ -1,0 +1,6 @@
+// Font size in em
+// --------------------------------------------------
+// $sizeInPx: eg 12px
+@mixin font-size-in-em ( $size-in-px ) {
+  font-size: px-to-em( $size-in-px );
+}

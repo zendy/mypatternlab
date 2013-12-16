@@ -1,0 +1,7 @@
+// Box sizing border-box
+// --------------------------------------------------
+
+*, *::after, *::before{
+  // from compass
+  @include box-sizing( border-box );
+}
