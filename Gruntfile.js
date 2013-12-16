@@ -8,11 +8,11 @@ module.exports = function(grunt) {
       main: {
         files: [
           { expand: true, cwd: './source/js/', src: '*', dest: './public/scripts/'},
-          { expand: true, cwd: './source/css/', src: ['style.css', 'pattern.css'], dest: './public/styles/' },
+          { expand: true, cwd: './source/css/', src: ['style.css', 'patternlab.css'], dest: './public/styles/' },
           { expand: true, cwd: './source/images/', src: '*', dest: './public/images/' },
           { expand: true, cwd: './source/fonts/', src: '*', dest: './public/fonts/'},
           { expand: true, cwd: './source/js/', src: '*', dest: '../www/scripts/'},
-          { expand: true, cwd: './source/css/', src: ['style.css'], dest: '../www/styles/' },
+          { expand: true, cwd: './source/css/', src: ['style.css', 'patternlab.css'], dest: '../www/styles/' },
           { expand: true, cwd: './source/images/', src: '*', dest: '../www/images/' },
           { expand: true, cwd: './source/fonts/', src: '*', dest: '../www/fonts/'}
         ]
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       },
       mustache: {
         files: ['source/_patterns/**/*.mustache'],
-        tasks: ['default']
+        tasks: ['patternlab-styleguide']
       },
       data: {
         files: ['source/_patterns/**/*.json'],
@@ -99,4 +99,5 @@ module.exports = function(grunt) {
   // grunt.registerTask('default', ['clean', 'patternlab', 'sass', 'copy']);
   grunt.registerTask('default', ['clean', 'patternlab', 'copy']);
   grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'copy', 'watch']);
 };
