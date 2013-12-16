@@ -10,8 +10,11 @@ module.exports = function(grunt) {
           { expand: true, cwd: './source/js/', src: '*', dest: './public/scripts/'},
           { expand: true, cwd: './source/css/', src: ['style.css', 'pattern.css'], dest: './public/styles/' },
           { expand: true, cwd: './source/images/', src: '*', dest: './public/images/' },
-          { expand: true, cwd: './source/images/sample/', src: '*', dest: './public/images/sample/'},
-          { expand: true, cwd: './source/fonts/', src: '*', dest: './public/fonts/'}
+          { expand: true, cwd: './source/fonts/', src: '*', dest: './public/fonts/'},
+          { expand: true, cwd: './source/js/', src: '*', dest: '../www/scripts/'},
+          { expand: true, cwd: './source/css/', src: ['style.css'], dest: '../www/styles/' },
+          { expand: true, cwd: './source/images/', src: '*', dest: '../www/images/' },
+          { expand: true, cwd: './source/fonts/', src: '*', dest: '../www/fonts/'}
         ]
       }
     },
@@ -36,7 +39,7 @@ module.exports = function(grunt) {
         files: [
           'source/css/**/*.{scss,sass}'
         ],
-        tasks: ['compass', 'default']
+        tasks: ['compass', 'copy']
       },
       mustache: {
         files: ['source/_patterns/**/*.mustache'],
