@@ -19,5 +19,6 @@ latest-change.txt
 patternlab.json
 .sass-cache/*
 /sass-cache
+/source/css/*.css
 *.sublime-project
 *.sublime-workspace
