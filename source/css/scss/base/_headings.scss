@@ -11,8 +11,7 @@
  */
 
 h1, h2, h3, h4, h6 {
-  font-family: "DIN-Bold";
-  font-weight: 700;
+  font-family: "";
 }
 
 h4, h5 {
@@ -21,28 +20,26 @@ h4, h5 {
 
 @include at-breakpoint( $total-columns ) {
   h1, .alpha {
-    @include font-size-in-em( 36px );
+    @include font-size-in-em( px );
   }
 
   h2, .beta {
-    @include font-size-in-em( 31px );
+    @include font-size-in-em( px );
   }
 
   h3, .gamma {
-    @include font-size-in-em( 27px );
+    @include font-size-in-em( px );
   }
 
   h4, .delta {
-    @include font-size-in-em( 22px );
+    @include font-size-in-em( px );
   }
 
   h5, .teta {
-    font-family: "DIN-Medium";
-    font-weight: 400;
-    @include font-size-in-em( 15px );
+    @include font-size-in-em( px );
   }
 
   h6, .zeta {
-    @include font-size-in-em( 12px );
+    @include font-size-in-em( px );
   }
 }

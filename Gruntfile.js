@@ -7,14 +7,10 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { expand: true, cwd: './source/js/', src: '*', dest: './public/scripts/'},
-          { expand: true, cwd: './source/css/', src: ['style.css', 'patternlab.css'], dest: './public/styles/' },
-          { expand: true, cwd: './source/images/', src: '*', dest: './public/images/' },
-          { expand: true, cwd: './source/fonts/', src: '*', dest: './public/fonts/'},
-          { expand: true, cwd: './source/js/', src: '*', dest: '../www/scripts/'},
+          // { expand: true, cwd: './source/js/', src: '*', dest: '../www/scripts/'},
           { expand: true, cwd: './source/css/', src: ['style.css', 'patternlab.css'], dest: '../www/styles/' },
-          { expand: true, cwd: './source/images/', src: '*', dest: '../www/images/' },
-          { expand: true, cwd: './source/fonts/', src: '*', dest: '../www/fonts/'}
+          // { expand: true, cwd: './source/images/', src: '*', dest: '../www/images/' },
+          // { expand: true, cwd: './source/fonts/', src: '*', dest: '../www/fonts/'}
         ]
       }
     },

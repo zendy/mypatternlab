@@ -38,28 +38,12 @@
   background-color: #ff2b63;
   border-radius: 5px;
   color: #fff;
-  font-family: "DIN-Bold";
+  font-family: "";
   @include font-size-in-em( 18px );
 
   &:hover, &:focus {
     background-color: #666;
     color: #fff;
-  }
-}
-
-.btn--social {
-  padding: $default-pad-half;
-  background-color: #ddd;
-  color: #999;
-  @include skewX( -15deg );
-
-  &:hover, &:focus {
-    background-color: #fff;
-  }
-
-  i {
-    display: inline-block;
-    @include skewX( 15deg );
   }
 }
 
