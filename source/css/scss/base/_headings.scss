@@ -10,36 +10,30 @@
  * h6, .zeta
  */
 
-h1, h2, h3, h4, h6 {
-  font-family: "";
+h1, h2, h3, h4, h5, h6 {
+  // font-family: "";
 }
 
-h4, h5 {
-  color: #cc0544;
+h1, .alpha {
+  @include font-size-in-em( px );
 }
 
-@include at-breakpoint( $total-columns ) {
-  h1, .alpha {
-    @include font-size-in-em( px );
-  }
+h2, .beta {
+  @include font-size-in-em( px );
+}
 
-  h2, .beta {
-    @include font-size-in-em( px );
-  }
+h3, .gamma {
+  @include font-size-in-em( px );
+}
 
-  h3, .gamma {
-    @include font-size-in-em( px );
-  }
+h4, .delta {
+  @include font-size-in-em( px );
+}
 
-  h4, .delta {
-    @include font-size-in-em( px );
-  }
+h5, .teta {
+  @include font-size-in-em( px );
+}
 
-  h5, .teta {
-    @include font-size-in-em( px );
-  }
-
-  h6, .zeta {
-    @include font-size-in-em( px );
-  }
+h6, .zeta {
+  @include font-size-in-em( px );
 }

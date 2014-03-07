@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    MEDIA OBJECT
+\*------------------------------------*/
+/**
+ * .media-object
+ * .media-object__image
+ * .media-object__content
+ */
+
+
+.media-object {
+  @extend %clearfix;
+}
+
+.media-object__image {
+  float: left;
+  margin-right: 3%;
+  width: 27%;
+}
+
+.media-object__content {
+  float: right;
+  width: 70%;
+}

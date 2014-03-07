@@ -73,12 +73,20 @@
 @import "scss/component/comments";
 @import "scss/component/captions";
 @import "scss/component/social-links";
+@import "scss/component/media-object";
+
+
+/*------------------------------------*\
+    TEMPLATE
+\*------------------------------------*/
+@import "scss/template/layout";
 
 
 /*------------------------------------*\
     MODULE
 \*------------------------------------*/
 @import "scss/module/header";
+@import "scss/module/hero";
 @import "scss/module/main";
 @import "scss/module/article";
 @import "scss/module/footer";
