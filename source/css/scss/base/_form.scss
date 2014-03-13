@@ -2,18 +2,21 @@
     FORM
 \*------------------------------------*/
 /**
- * .form--search
+ * form
  */
 
 
 form {
-  label {
-    color: #666;
-    // font-family: "";
+  .field-row {
+    margin-bottom: 5px;
   }
 
-  input {
-    height: 35px;
-    position: relative;
+  .field-row__label {
+    display: block;
+  }
+
+  .field-row__input {
+    display: inline-block;
+    border: none;
   }
 }

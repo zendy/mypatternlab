@@ -31,7 +31,7 @@ $font-color            : #333;
 
 
 // Typography
-$font-primary               : 'DIN-Regular', 'arial', 'sans-serif';
+$font-primary               : '', 'arial', 'sans-serif';
 $font-secondary             : '', 'Times New Roman', serif;
 $font-size-norm             : px-to-em( 16px );
 $font-size-slightly-larger  : px-to-em( 18px );
@@ -55,10 +55,11 @@ $bp-xxxl    : 93em;
 
 // Layout
 // Susy Settings
-$total-columns : 4;
-$column-width : 4em;
-$gutter-width : 1em;
-$grid-padding : $gutter-width;
-$break-1      : 8;
-$break-2      : 12;
-$break-3      : 14;
+$break-1       : 8;
+$break-2       : 12;
+$break-3       : 14;
+$break-4       : 14;
+$total-columns : $break-4;
+$column-width  : 4em;
+$gutter-width  : 1em;
+$grid-padding  : $gutter-width;

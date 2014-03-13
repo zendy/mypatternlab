@@ -10,9 +10,6 @@
  * h6, .zeta
  */
 
-h1, h2, h3, h4, h5, h6 {
-  // font-family: "";
-}
 
 h1, .alpha {
   @include font-size-in-em( px );

@@ -16,9 +16,27 @@
   float: left;
   margin-right: 3%;
   width: 27%;
+
+  @include at-breakpoint( $break-1 ) {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  @include at-breakpoint( $break-2 ) {
+    margin-right: 3%;
+    width: 27%;
+  }
 }
 
 .media-object__content {
   float: right;
   width: 70%;
+
+  @include at-breakpoint( $break-1 ) {
+    width: 100%;
+  }
+
+  @include at-breakpoint( $break-2 ) {
+    width: 70%;
+  }
 }

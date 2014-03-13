@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    LAYOUT
+\*------------------------------------*/
+/**
+ * .container
+ */
+
+.container {
+  @include container;
+
+  @include at-breakpoint( $break-1 ) {
+    $column-width   : 6em;
+    $gutter-width   : 0;
+    $grid-padding   : $gutter-width;
+    @include set-container-width;
+  }
+
+  // reset
+  $column-width   : 4em;
+  $gutter-width   : 1em;
+  $grid-padding   : $gutter-width;
+
+  @include at-breakpoint( $break-2 ) {
+    @include set-container-width;
+  }
+
+  @include at-breakpoint( $break-3 ) {
+    @include set-container-width;
+  }
+
+  @include at-breakpoint( $break-4 ) {
+    @include set-container-width;
+  }
+}
