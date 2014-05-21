@@ -27,11 +27,11 @@ module.exports = function(grunt) {
       patternlab: ['Gruntfile.js', './builder/lib/patternlab.js']
     },
     watch: {
-      compass: {
+      sass: {
         files: [
           'source/css/**/*.{scss,sass}'
         ],
-        tasks: ['compass', 'autoprefixer']
+        tasks: ['sass', 'autoprefixer']
       },
       mustache: {
         files: ['source/_patterns/**/*.mustache'],
@@ -42,14 +42,18 @@ module.exports = function(grunt) {
         tasks: ['default']
       }
     },
-    compass: {
+    sass: {
       build: {
         options: {
-          cssDir: './source/css/',
-          sassDir: './source/css/',
-          force: true,
-          outputStyle: 'expanded',
-        }
+          style: 'expanded'
+        },
+        files: [{
+          expand: true,
+          cwd: './source/css/',
+          src: ['*.{scss,sass}'],
+          dest: './source/css/',
+          ext: '.css'
+        }]
       }
     },
     autoprefixer: {
@@ -65,22 +69,13 @@ module.exports = function(grunt) {
         dest: '../www/styles/' // -> dest/css/file1.css, dest/css/file2.css
       }
     },
-    connect: {
-      server: {
-        options: {
-          base: 'public/',
-          port: 3000,
-        },
-      },
-    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   //load the patternlab task
@@ -89,7 +84,7 @@ module.exports = function(grunt) {
   //if you choose to use scss, or any preprocessor, you can add it here
   // grunt.registerTask('default', ['clean', 'patternlab', 'sass', 'copy']);
   grunt.registerTask('default', ['clean', 'patternlab', 'copy']);
-  grunt.registerTask('dev', ['connect', 'watch']);
+  // grunt.registerTask('dev', ['connect', 'watch']);
   // grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'copy', 'watch']);
-  grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'autoprefixer', 'watch']);
+  grunt.registerTask('styleguide', ['patternlab-styleguide', 'sass', 'autoprefixer', 'watch']);
 };
