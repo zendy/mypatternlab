@@ -50,7 +50,7 @@ module.exports = function(grunt) {
           force: true,
           outputStyle: 'expanded',
           bundleExec: true,
-          require: ['breakpoint']
+          require: ['breakpoint', 'susy']
         }
       }
     },

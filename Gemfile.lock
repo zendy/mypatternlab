@@ -33,6 +33,8 @@ GEM
     sassy-maps (0.3.2)
       compass (~> 1.0.0.alpha.13)
       sass (~> 3.3.0.rc.2)
+    susy (2.1.2)
+      sass (~> 3.3.0)
 
 PLATFORMS
   ruby
@@ -41,3 +43,4 @@ DEPENDENCIES
   breakpoint (~> 2.4.2)
   compass (~> 1.0.0.alpha.19)
   sass (~> 3.3.7)
+  susy (~> 2.1.2)
