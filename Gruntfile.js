@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           // { expand: true, cwd: './source/js/', src: '*', dest: '../www/scripts/'},
-          { expand: true, cwd: './source/css/', src: ['style.css', 'patternlab.css'], dest: '../www/styles/' },
+          // { expand: true, cwd: './source/css/', src: ['style.css', 'patternlab.css'], dest: '../www/styles/' },
           // { expand: true, cwd: './source/images/', src: '*', dest: '../www/images/' },
           // { expand: true, cwd: './source/fonts/', src: '*', dest: '../www/fonts/'}
         ]
@@ -27,15 +27,11 @@ module.exports = function(grunt) {
       patternlab: ['Gruntfile.js', './builder/lib/patternlab.js']
     },
     watch: {
-      scss: { //scss can be watched if you like
-       files: ['source/css/**/*.scss', 'public/styleguide/styles/*.scss'],
-       tasks: ['default']
-      },
       compass: {
         files: [
           'source/css/**/*.{scss,sass}'
         ],
-        tasks: ['compass', 'copy']
+        tasks: ['compass', 'autoprefixer']
       },
       mustache: {
         files: ['source/_patterns/**/*.mustache'],
@@ -46,20 +42,6 @@ module.exports = function(grunt) {
         tasks: ['default']
       }
     },
-    sass: {
-      build: {
-        options: {
-          style: 'expanded',
-          precision: 8
-        },
-        files: {
-          './source/css/style.css': './source/css/style.scss',
-          './source/css/pattern.css': './source/css/pattern.scss',
-          './public/styleguide/styles/static.css': './public/styleguide/styles/static.scss',
-          './public/styleguide/styles/styleguide.css': './public/styleguide/styles/styleguide.scss'
-        }
-      }
-    },
     compass: {
       build: {
         options: {
@@ -68,6 +50,19 @@ module.exports = function(grunt) {
           force: true,
           outputStyle: 'expanded',
         }
+      }
+    },
+    autoprefixer: {
+      options: {
+        // Task-specific options go here.
+      },
+
+      // prefix all files
+      multiple_files: {
+        expand: true,
+        flatten: true,
+        src: './source/css/*.css', // -> src/css/file1.css, src/css/file2.css
+        dest: '../www/styles/' // -> dest/css/file1.css, dest/css/file2.css
       }
     },
     connect: {
@@ -83,10 +78,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   //load the patternlab task
   grunt.task.loadTasks('./builder/');
@@ -95,5 +90,6 @@ module.exports = function(grunt) {
   // grunt.registerTask('default', ['clean', 'patternlab', 'sass', 'copy']);
   grunt.registerTask('default', ['clean', 'patternlab', 'copy']);
   grunt.registerTask('dev', ['connect', 'watch']);
-  grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'copy', 'watch']);
+  // grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'copy', 'watch']);
+  grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'autoprefixer', 'watch']);
 };
