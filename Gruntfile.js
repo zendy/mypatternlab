@@ -27,11 +27,11 @@ module.exports = function(grunt) {
       patternlab: ['Gruntfile.js', './builder/lib/patternlab.js']
     },
     watch: {
-      sass: {
+      compass: {
         files: [
           'source/css/**/*.{scss,sass}'
         ],
-        tasks: ['sass', 'autoprefixer']
+        tasks: ['compass', 'autoprefixer']
       },
       mustache: {
         files: ['source/_patterns/**/*.mustache'],
@@ -42,18 +42,16 @@ module.exports = function(grunt) {
         tasks: ['default']
       }
     },
-    sass: {
+    compass: {
       build: {
         options: {
-          style: 'expanded'
-        },
-        files: [{
-          expand: true,
-          cwd: './source/css/',
-          src: ['*.{scss,sass}'],
-          dest: './source/css/',
-          ext: '.css'
-        }]
+          cssDir: './source/css/',
+          sassDir: './source/css/',
+          force: true,
+          outputStyle: 'expanded',
+          bundleExec: true,
+          require: ['breakpoint']
+        }
       }
     },
     autoprefixer: {
@@ -75,7 +73,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   //load the patternlab task
@@ -86,5 +84,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['clean', 'patternlab', 'copy']);
   // grunt.registerTask('dev', ['connect', 'watch']);
   // grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'copy', 'watch']);
-  grunt.registerTask('styleguide', ['patternlab-styleguide', 'sass', 'autoprefixer', 'watch']);
+  grunt.registerTask('styleguide', ['patternlab-styleguide', 'compass', 'autoprefixer', 'watch']);
 };
