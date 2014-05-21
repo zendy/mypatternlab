@@ -1,10 +1,4 @@
 /*------------------------------------*\
-    COMPASS
-\*------------------------------------*/
-@import "compass";
-
-
-/*------------------------------------*\
     PLACEHOLDERS
 \*------------------------------------*/
 @import "scss/placeholder/clearfix";
@@ -40,15 +34,7 @@
 /*------------------------------------*\
     SUSY
 \*------------------------------------*/
-@import "scss/susy/support";
-@import "scss/susy/units";
-@import "scss/susy/settings";
-@import "scss/susy/functions";
-@import "scss/susy/grid";
-@import "scss/susy/padding";
-@import "scss/susy/margin";
-@import "scss/susy/media";
-@import "scss/susy/background";
+@import "scss/susy/language/susy";
 
 
 /*------------------------------------*\
