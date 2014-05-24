@@ -1,6 +1,6 @@
 .sg-main {
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
 }
 
 .sg-colors {
@@ -19,4 +19,12 @@
     padding-bottom: 20%;
     width: 80%;
   }
+}
+
+.sg-head, .sg-head a {
+  color: #c00;
+}
+
+.sg-head {
+  font-size: 1.5em;
 }

@@ -6,29 +6,25 @@
  */
 
 .container {
-  @include container;
+  @extend %clearfix;
 
-  @include at-breakpoint( $break-1 ) {
-    $column-width   : 6em;
-    $gutter-width   : 0;
-    $grid-padding   : $gutter-width;
-    @include set-container-width;
+  @include susy-breakpoint( $bp-small, $layout-small ) {
+    padding: 0 1em;
+    @include container( $bp-small );
   }
 
-  // reset
-  $column-width   : 4em;
-  $gutter-width   : 1em;
-  $grid-padding   : $gutter-width;
-
-  @include at-breakpoint( $break-2 ) {
-    @include set-container-width;
+  @include susy-breakpoint( $bp-medium, $layout-medium ) {
+    padding: 0 1em;
+    @include container( $bp-medium );
   }
 
-  @include at-breakpoint( $break-3 ) {
-    @include set-container-width;
+  @include susy-breakpoint( $bp-large, $layout-large ) {
+    padding: 0 2em;
+    @include container( $bp-large );
   }
 
-  @include at-breakpoint( $break-4 ) {
-    @include set-container-width;
+  @include susy-breakpoint( $bp-xl, $layout-xl, $no-query: true ) {
+    padding: 0 2em;
+    @include container( $bp-xl );
   }
 }

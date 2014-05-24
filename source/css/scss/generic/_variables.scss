@@ -40,26 +40,26 @@ $font-size-small            : px-to-em( 12px );
 $font-size-large            : px-to-em( 20px );
 
 
+// SASS Breakpoint Settings
+$breakpoint-no-queries: false;
+$breakpoint-no-query-fallbacks: true;
+
+
 // Breakpoints
-$bp-small   : 24em;
-$bp-small-2 : 29.75em;
-$bp-small-3 : 39.8em;
-$bp-med     : 46.8em;
-$bp-med-2   : 48em;
-$bp-large   : 50em;
-$bp-large-2 : 66em;
-$bp-xl      : 73em;
-$bp-xxl     : 89em;
-$bp-xxxl    : 93em;
+$bp-small    : 24em;
+$bp-small-2  : 29.75em;
+$bp-small-3  : 39.8em;
+$bp-medium   : 46.8em;
+$bp-medium-2 : 48em;
+$bp-large    : 50em;
+$bp-large-2  : 66em;
+$bp-xl       : 73em;
+$bp-xxl      : 89em;
+$bp-xxxl     : 93em;
 
 
-// Layout
-// Susy Settings
-$break-1       : 8;
-$break-2       : 12;
-$break-3       : 14;
-$break-4       : 14;
-$total-columns : $break-4;
-$column-width  : 4em;
-$gutter-width  : 1em;
-$grid-padding  : $gutter-width;
+// SUSY Layout Settings
+$layout-small  : 4 1/8;
+$layout-medium : 8;
+$layout-large  : 10;
+$layout-xl     : 12;
