@@ -2,6 +2,5 @@
 // --------------------------------------------------
 
 *, *::after, *::before{
-  // from compass
-  @include box-sizing( border-box );
+  box-sizing: border-box;
 }

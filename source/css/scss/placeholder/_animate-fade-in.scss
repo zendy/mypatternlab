@@ -7,7 +7,7 @@
 
 
 %animate-fade-in {
-  @include transition( opacity, 0.3s, ease-out );
+  transition: opacity 0.3s ease-out;
 
   &:hover {
     opacity: 1;
