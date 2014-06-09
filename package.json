@@ -1,6 +1,6 @@
 {
   "name": "patternlab-node",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "devDependencies": {
     "gulp": "^3.6.2",
     "gulp-autoprefixer": "0.0.7",
