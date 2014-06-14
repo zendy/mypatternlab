@@ -41,11 +41,12 @@ gulp.task('patternlab', function() {
   .pipe(mustache({
     partials: partialsArray
   }))
+  .pipe($.size())
   .pipe(gulp.dest('../www/'));
 });
 
 gulp.task('watch', ['styles'], function() {
   gulp.watch('./source/css/**/*.scss', ['styles']);
 
-  gulp.watch('./source/patterns/**/*.mustache' ['patternlab']);
+  gulp.watch('./source/patterns/**/*.mustache', ['patternlab']);
 });
