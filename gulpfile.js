@@ -2,8 +2,6 @@ var gulp = require( 'gulp' );
 
 // load plugins
 var $ = require( 'gulp-load-plugins' )();
-var minifyCSS    = require( 'gulp-minify-css' );
-var mustache = require( 'gulp-mustache' );
 var fs = require( 'fs' );
 
 gulp.task('styles', function() {
@@ -14,7 +12,7 @@ gulp.task('styles', function() {
     require: ['breakpoint', 'susy']
   }))
   .pipe($.autoprefixer())
-  .pipe(minifyCSS())
+  .pipe($.minifyCss())
   .pipe($.size())
   .pipe(gulp.dest('../www/styles/'));
 });
@@ -38,7 +36,7 @@ gulp.task('patternlab', function() {
   }
 
   gulp.src('./source/patternlab-files/styleguide.mustache')
-  .pipe(mustache({
+  .pipe($.mustache({
     partials: partialsArray
   }))
   .pipe($.size())
