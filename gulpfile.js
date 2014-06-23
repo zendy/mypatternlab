@@ -43,8 +43,18 @@ gulp.task('patternlab', function() {
   .pipe(gulp.dest('../www/'));
 });
 
-gulp.task('watch', ['styles'], function() {
-  gulp.watch('./source/css/**/*.scss', ['styles']);
+gulp.task('watch', [], function() {
+  var watcherStyles = gulp.watch('./source/css/**/*.scss', ['styles']);
+  watcherStyles.on('change', function ( event ) {
+    // added, changed, or deleted
+    // The path of the modified file
+    console.log( event.type + ' file: ' + event.path ); // added, changed, or deleted
+  });
 
-  gulp.watch('./source/patterns/**/*.mustache', ['patternlab']);
+  var watcherPatternlab = gulp.watch('./source/patterns/**/*.mustache', ['patternlab']);
+  watcherPatternlab.on('change', function ( event ) {
+    // added, changed, or deleted
+    // The path of the modified file
+    console.log( event.type + ' file: ' + event.path ); // added, changed, or deleted
+  });
 });
