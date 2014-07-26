@@ -43,7 +43,7 @@ gulp.task('patternlab', function() {
   .pipe(gulp.dest('../www/'));
 });
 
-gulp.task('watch', [], function() {
+gulp.task('watch', [ 'styles', 'patternlab' ], function() {
   var watcherStyles = gulp.watch('./source/css/**/*.scss', ['styles']);
   watcherStyles.on('change', function ( event ) {
     // added, changed, or deleted
