@@ -2,17 +2,17 @@
     MEDIA OBJECT
 \*------------------------------------*/
 /**
- * .media-object
- * .media-object__image
- * .media-object__content
+ * .MediaObject
+ * .MediaObject_Image
+ * .MediaObject_Content
  */
 
 
-.media-object {
+.MediaObject {
   @extend %clearfix;
 }
 
-.media-object__image {
+.MediaObject_Image {
   float: left;
   margin-right: 3%;
   width: 27%;
@@ -28,7 +28,7 @@
   // }
 }
 
-.media-object__content {
+.MediaObject_Content {
   float: right;
   width: 70%;
 

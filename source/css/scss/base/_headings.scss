@@ -2,35 +2,35 @@
     HEADINGS
 \*------------------------------------*/
 /**
- * h1, .aplha
- * h2, .beta
- * h3, .gamma
- * h4, .delta
- * h5, .teta
- * h6, .zeta
+ * h1, .Alpha
+ * h2, .Beta
+ * h3, .Gamma
+ * h4, .Delta
+ * h5, .Teta
+ * h6, .Zeta
  */
 
 
-h1, .alpha {
+h1, .Alpha {
   @include font-size-in-em( px );
 }
 
-h2, .beta {
+h2, .Beta {
   @include font-size-in-em( px );
 }
 
-h3, .gamma {
+h3, .Gamma {
   @include font-size-in-em( px );
 }
 
-h4, .delta {
+h4, .Delta {
   @include font-size-in-em( px );
 }
 
-h5, .teta {
+h5, .Teta {
   @include font-size-in-em( px );
 }
 
-h6, .zeta {
+h6, .Zeta {
   @include font-size-in-em( px );
 }

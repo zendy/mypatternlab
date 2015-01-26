@@ -2,10 +2,10 @@
     LAYOUT
 \*------------------------------------*/
 /**
- * .container
+ * .Container
  */
 
-.container {
+.Container {
   @extend %clearfix;
 
   @include susy-breakpoint( $bp-small, $layout-small ) {
